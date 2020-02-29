@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { debounce } from "lodash";
+import { SearchIcon, MovieIcon } from "./Icons";
 
 const apiKey = "87d395aaa72bae75df666834b8e838d3";
 const hostUrl = "https://api.themoviedb.org/3";
@@ -57,11 +58,19 @@ class Autocomplete extends Component {
         <div className="component-container">
           <div className="input-container">
             <div className="input-container__input">
+              <MovieIcon className="movie-icon" color="white"></MovieIcon>
+
               <div className="input-clickable">
                 {userInput ? userInput : "Enter movie name"}
               </div>
             </div>
-            <button></button>
+            <button>
+              <SearchIcon
+                color="#ff690f"
+                size={33}
+                strokeWidth={1.5}
+              ></SearchIcon>
+            </button>
           </div>
         </div>
       </Fragment>
