@@ -26,3 +26,24 @@
     margin-top: 13px;
     font-size: 0.9rem;
 }
+
+button {
+    display: flex;
+    border-style: none;
+    width: 44px;
+    height: 44px;
+    background-color: white;
+    border-radius: 0.12rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    outline: none;
+}
+
+.movie-icon {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    left: 30px;
+    top: 30px;
+}
