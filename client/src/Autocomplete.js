@@ -17,7 +17,8 @@ class Autocomplete extends Component {
       // User value
       userInput: "",
       // Whether the input element was clicked
-      inputClicked: false
+      inputClicked: false,
+      fade: false
     };
   }
 
@@ -45,13 +46,76 @@ class Autocomplete extends Component {
     }
   }, 150);
 
+  onBlur = () => {
+    this.checkBlur();
+  };
+
+  checkBlur() {
+    if (this.state.showSuggestions === false) {
+      this.setState({ inputClicked: false });
+    }
+  }
+
+  //when user clicks on the grey input box
+  onInputClick = () => {
+    this.setState({ inputClicked: true, fade: true });
+  };
+
+  //When the input value is changed
+  onChange = e => {
+    this.setState({
+      userInput: e.currentTarget.value
+    });
+
+    if (e.currentTarget.value.length > 2) {
+      this.setState(
+        {
+          showSuggestions: true
+        },
+        this.getInfo
+      );
+    } else {
+      this.setState({
+        showSuggestions: false
+      });
+    }
+  };
+
   render() {
     const {
       onChange,
       onClick,
       onInputClick,
-      state: { filteredSuggestions, showSuggestions, userInput, inputClicked }
+      onBlur,
+      state: {
+        filteredSuggestions,
+        showSuggestions,
+        userInput,
+        inputClicked,
+        fade
+      }
     } = this;
+    let secondInputComponent;
+    if (inputClicked) {
+      secondInputComponent = (
+        <div className={fade ? "fade" : ""}>
+          <input
+            autoFocus="autofocus"
+            className="input-clicked"
+            onChange={onChange}
+            onBlur={onBlur}
+            value={userInput}
+          />
+          <MovieIcon
+            className="movie-icon-input"
+            color="black"
+            size={23}
+            strokeWidth={1.5}
+          ></MovieIcon>
+          <label className="input-label">Enter a movie name</label>
+        </div>
+      );
+    }
 
     return (
       <Fragment>
@@ -60,9 +124,10 @@ class Autocomplete extends Component {
             <div className="input-container__input">
               <MovieIcon className="movie-icon" color="white"></MovieIcon>
 
-              <div className="input-clickable">
+              <div className="input-clickable" onClick={onInputClick}>
                 {userInput ? userInput : "Enter movie name"}
               </div>
+              {secondInputComponent}
             </div>
             <button>
               <SearchIcon
