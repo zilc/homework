@@ -43,6 +43,30 @@ class Autocomplete extends Component {
         });
     }
   }, 150);
+
+  render() {
+    const {
+      onChange,
+      onClick,
+      onInputClick,
+      state: { filteredSuggestions, showSuggestions, userInput, inputClicked }
+    } = this;
+
+    return (
+      <Fragment>
+        <div className="component-container">
+          <div className="input-container">
+            <div className="input-container__input">
+              <div className="input-clickable">
+                {userInput ? userInput : "Enter movie name"}
+              </div>
+            </div>
+            <button></button>
+          </div>
+        </div>
+      </Fragment>
+    );
+  }
 }
 
 export default Autocomplete;
