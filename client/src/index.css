@@ -1,3 +1,8 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
 .component-container {
     display: flex;
     background-image: linear-gradient(to right, #ff690f, #eb320d);
@@ -46,4 +51,52 @@ button {
     height: 27px;
     left: 30px;
     top: 30px;
+}
+
+.fade {
+    animation: fade-in-keyframes 0.3s;
+}
+
+@keyframes fade-in-keyframes {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.input-clicked {
+    border: none;
+    border-bottom: 0.3px rgba(214, 212, 212, 0.515) solid;
+    border-radius: 0.1rem;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 100%;
+    padding-right: 1px;
+    padding-left: 53px;
+    padding-bottom: 5px;
+    bottom: 40px;
+    height: 46px;
+    z-index: 2;
+    position: relative;
+}
+
+.movie-icon-input {
+    position: relative;
+    bottom: 76px;
+    left: 15px;
+    z-index: 3;
+}
+
+.input-label {
+    font-size: 0.7rem;
+    position: relative;
+    bottom: 70px;
+    left: 30px;
+    z-index: 3;
+    color: grey;
+    font-weight: 600;
 }
