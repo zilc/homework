@@ -1,0 +1,28 @@
+.component-container {
+    display: flex;
+    background-image: linear-gradient(to right, #ff690f, #eb320d);
+    padding: 20px;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    font-size: 12px;
+}
+
+.input-container__input {
+    padding-left: 50px;
+    border: none;
+    border-radius: 0.1rem;
+    width: 100%;
+    height: 44px;
+    background-color: rgba(214, 212, 212, 0.315);
+    font-weight: bolder;
+    color: white;
+    display: block;
+}
+
+.input-clickable {
+    margin-top: 13px;
+    font-size: 0.9rem;
+}
