@@ -24,7 +24,6 @@ body {
   background-color: rgba(214, 212, 212, 0.315);
   font-weight: bolder;
   color: white;
-  display: block;
 }
 
 .input-clickable {
@@ -73,8 +72,6 @@ button:hover {
   border: none;
   border-bottom: 0.3px rgba(214, 212, 212, 0.515) solid;
   border-radius: 0.1rem;
-  background-color: white;
-  color: black;
   font-weight: bold;
   font-size: 0.9rem;
   width: 100%;
@@ -108,7 +105,6 @@ button:hover {
   list-style: none;
   border-radius: 0.1rem;
   background-color: white;
-  color: black;
   width: 100%;
   padding-right: 1px;
   padding-left: 51px;
