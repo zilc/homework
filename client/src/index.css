@@ -45,6 +45,9 @@ button {
   outline: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
 .movie-icon {
   position: absolute;
   width: 27px;
