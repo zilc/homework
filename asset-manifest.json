@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/zilc/homework/tree/master/client/static/css/main.96759321.chunk.css",
-    "main.js": "/zilc/homework/tree/master/client/static/js/main.06561721.chunk.js",
-    "main.js.map": "/zilc/homework/tree/master/client/static/js/main.06561721.chunk.js.map",
-    "runtime-main.js": "/zilc/homework/tree/master/client/static/js/runtime-main.4dac77f4.js",
-    "runtime-main.js.map": "/zilc/homework/tree/master/client/static/js/runtime-main.4dac77f4.js.map",
-    "static/js/2.c4af7f7a.chunk.js": "/zilc/homework/tree/master/client/static/js/2.c4af7f7a.chunk.js",
-    "static/js/2.c4af7f7a.chunk.js.map": "/zilc/homework/tree/master/client/static/js/2.c4af7f7a.chunk.js.map",
-    "index.html": "/zilc/homework/tree/master/client/index.html",
-    "precache-manifest.8b18ebed734fb33364b41ce689b655a9.js": "/zilc/homework/tree/master/client/precache-manifest.8b18ebed734fb33364b41ce689b655a9.js",
-    "service-worker.js": "/zilc/homework/tree/master/client/service-worker.js",
-    "static/css/main.96759321.chunk.css.map": "/zilc/homework/tree/master/client/static/css/main.96759321.chunk.css.map",
-    "static/js/2.c4af7f7a.chunk.js.LICENSE.txt": "/zilc/homework/tree/master/client/static/js/2.c4af7f7a.chunk.js.LICENSE.txt"
+    "main.css": "/homework/static/css/main.96759321.chunk.css",
+    "main.js": "/homework/static/js/main.06561721.chunk.js",
+    "main.js.map": "/homework/static/js/main.06561721.chunk.js.map",
+    "runtime-main.js": "/homework/static/js/runtime-main.7c4e7c48.js",
+    "runtime-main.js.map": "/homework/static/js/runtime-main.7c4e7c48.js.map",
+    "static/js/2.c4af7f7a.chunk.js": "/homework/static/js/2.c4af7f7a.chunk.js",
+    "static/js/2.c4af7f7a.chunk.js.map": "/homework/static/js/2.c4af7f7a.chunk.js.map",
+    "index.html": "/homework/index.html",
+    "precache-manifest.a8439a55c2744de31933a5178c34ed15.js": "/homework/precache-manifest.a8439a55c2744de31933a5178c34ed15.js",
+    "service-worker.js": "/homework/service-worker.js",
+    "static/css/main.96759321.chunk.css.map": "/homework/static/css/main.96759321.chunk.css.map",
+    "static/js/2.c4af7f7a.chunk.js.LICENSE.txt": "/homework/static/js/2.c4af7f7a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4dac77f4.js",
+    "static/js/runtime-main.7c4e7c48.js",
     "static/js/2.c4af7f7a.chunk.js",
     "static/css/main.96759321.chunk.css",
     "static/js/main.06561721.chunk.js"
