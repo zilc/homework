@@ -1,3 +1,7 @@
+:root {
+  --main-border-color: rgba(214, 212, 212, 0.515);
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -70,7 +74,7 @@ button:hover {
 
 .input-clicked {
   border: none;
-  border-bottom: 0.3px rgba(214, 212, 212, 0.515) solid;
+  border-bottom: 0.3px var(--main-border-color) solid;
   border-radius: 0.1rem;
   font-weight: bold;
   font-size: 0.9rem;
@@ -111,7 +115,7 @@ button:hover {
   padding-bottom: 5px;
   bottom: 78px;
   position: relative;
-  border: 1px solid rgba(214, 212, 212, 0.515);
+  border: 1px solid var(--main-border-color);
   box-shadow: 0px 3px 5px rgba(12, 11, 11, 0.267);
 }
 
