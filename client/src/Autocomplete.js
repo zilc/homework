@@ -81,6 +81,17 @@ class Autocomplete extends Component {
     }
   };
 
+  //when user clicks on a suggestion
+  onClick = e => {
+    //Update the user input and reset the rest of the state
+    this.setState(prevState => ({ inputClicked: !prevState.inputClicked }));
+    this.setState({
+      filteredSuggestions: [],
+      showSuggestions: false,
+      userInput: e.currentTarget.getAttribute("value")
+    });
+  };
+
   render() {
     const {
       onChange,
@@ -95,7 +106,10 @@ class Autocomplete extends Component {
         fade
       }
     } = this;
+
     let secondInputComponent;
+    let suggestionsListComponent;
+
     if (inputClicked) {
       secondInputComponent = (
         <div className={fade ? "fade" : ""}>
@@ -117,6 +131,33 @@ class Autocomplete extends Component {
       );
     }
 
+    if (showSuggestions && userInput.length > 2 && filteredSuggestions) {
+      if (filteredSuggestions.length) {
+        suggestionsListComponent = (
+          <ul className="suggestion-list">
+            {filteredSuggestions.map(suggestion => {
+              return (
+                <li
+                  className="suggestion-list__item"
+                  key={suggestion.id}
+                  datakey={suggestion.title}
+                  onClick={onClick}
+                  value={suggestion.title}
+                >
+                  <span className="title title--suggestions">
+                    {suggestion.title}
+                  </span>
+                  <div className="subtitle title--suggestions">
+                    {suggestion.rating} Rating, {suggestion.release_date}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        );
+      }
+    }
+
     return (
       <Fragment>
         <div className="component-container">
@@ -128,6 +169,7 @@ class Autocomplete extends Component {
                 {userInput ? userInput : "Enter movie name"}
               </div>
               {secondInputComponent}
+              {suggestionsListComponent}
             </div>
             <button>
               <SearchIcon
